@@ -55,7 +55,6 @@ namespace Baks.Core.Managers
                if (_caheBlendShape.TryGetValue(featuresCoefficient.blendShapeLocation, out float coefficient))
                {
                   Coefficient = coefficient;
-                  //Logger.Instance.LogInfo(featuresCoefficient.blendShapeLocation.ToString() + " " + Coefficient)
                   _caheBlendShape[featuresCoefficient.blendShapeLocation] = featuresCoefficient.coefficient;
                }
             }

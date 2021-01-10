@@ -31,10 +31,6 @@ namespace Baks.Core.Managers
         {
             m_points++;
             m_pointsText.text = $"{m_points}";
-
-            // if we are over 10 points let´s active second spawner
-            //if (m_points > 10)
-                //SpawnerManager.Instance.ActivateSecondSpawner();
         }
 
         public void DecrementPoints()

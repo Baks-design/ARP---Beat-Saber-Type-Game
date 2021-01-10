@@ -1,7 +1,7 @@
 using UnityEngine;
 using Baks.Core.Managers;
 
-namespace Baks.Core.Main
+namespace Baks.Core
 {
     public class Spawner : MonoBehaviour 
     {
@@ -17,8 +17,8 @@ namespace Baks.Core.Main
         private float m_spawnInMaxSeconds = 1.0f;
 
         [SerializeField]
-        [Range(0, 1)]
-        private float m_movementSpeed = 0.1f;
+        [Range(0, 100)]
+        private float m_movementSpeed = 10.0f;
 
         [SerializeField]
         [Range(0, 1)]
@@ -31,10 +31,7 @@ namespace Baks.Core.Main
         private float _generatedSeconds;
         private float _spawnTimer;
 
-        private void Awake() 
-        {
-            _spawnTimer = _generatedSeconds = Random.Range(m_spawnInMinSeconds, m_spawnInMaxSeconds);
-        }
+        private void Awake() => _spawnTimer = _generatedSeconds = Random.Range(m_spawnInMinSeconds, m_spawnInMaxSeconds);
 
         private void Start() 
         {
